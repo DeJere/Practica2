@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- LOGO -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            android:src="@drawable/logouteqe"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- TÍTULO -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UTEQ - Registro de Usuarios"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#4CAF50"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"/>
+
+        <!-- 1. CÉDULA -->
+        <TextView android:text="Cédula:" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/etCedula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ingrese 10 dígitos"
+            android:inputType="number"
+            android:maxLength="10"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- 2. NOMBRES -->
+        <TextView android:text="Nombres:" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/etNombres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="NOMBRES COMPLETOS"
+            android:inputType="textCapCharacters"
+            android:maxLength="500"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- 3. FECHA -->
+        <TextView android:text="Fecha de Nacimiento:" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/etFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Seleccione fecha"
+            android:focusable="false"
+            android:inputType="date"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- 4. CIUDAD -->
+        <TextView android:text="Ciudad:" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/etCiudad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="CIUDAD"
+            android:inputType="textCapCharacters"
+            android:maxLength="200"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- 5. GÉNERO -->
+        <TextView android:text="Género:" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold"/>
+        <RadioGroup
+            android:id="@+id/rgGenero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+            <RadioButton android:id="@+id/rbMasculino" android:text="Masculino" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="20dp"/>
+            <RadioButton android:id="@+id/rbFemenino" android:text="Femenino" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </RadioGroup>
+
+        <!-- 6. CORREO -->
+        <TextView android:text="Correo:" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/etCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ejemplo@uteq.edu.ec"
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- 7. TELÉFONO -->
+        <TextView android:text="Teléfono:" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/etTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="09XXXXXXXX"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- BOTONES -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <Button
+                android:id="@+id/btnLimpiar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Limpiar"
+                android:backgroundTint="#F44336"
+                android:layout_marginEnd="20dp"/>
+            <Button
+                android:id="@+id/btnEnviar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enviar"
+                android:backgroundTint="#2196F3"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
